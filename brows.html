@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Auctions | SpazaSoko</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./brows.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="sticky-header">
+        <nav aria-label="Main navigation">
+            <div class="container">
+                <div class="logo">
+                    <a href="../" aria-label="SpazaSoko home">
+                        <img src="./logo.png" alt="SpazaSoko Logo" width="50" height="50">
+                        <span class="sr-only">SpazaSoko</span>
+                    </a>
+                </div>
+                
+                <ul class="nav-links" id="nav-menu">
+                    <li><a href="./index.html" class="nav-link active">Home</a></li>
+                    <li><a href="./brows.html" class="nav-link active">Browse Auctions</a></li>
+                    <li><a href="./work.html" class="nav-link">How It Works</a></li>
+                    <li><a href="./supply.html" class="nav-link">For Suppliers</a></li>
+                    <li><a href="./support.html" class="nav-link">Support</a></li>
+                    
+                </ul>
+                
+                <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="browse-auctions">
+        <section class="auction-hero">
+            <div class="container">
+                <h1>Live & Upcoming Auctions</h1>
+                <p>Find the best deals on surplus stock from top suppliers</p>
+                
+                <div class="auction-search">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search auctions..." aria-label="Search auctions">
+                        <button class="btn-primary">
+                            <i class="fas fa-search"></i>
+                            <span>Search</span>
+                        </button>
+                    </div>
+                    
+                    <div class="filter-toggles">
+                        <button class="filter-btn active" data-filter="all">All Auctions</button>
+                        <button class="filter-btn" data-filter="live">Live Now</button>
+                        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                        <button class="filter-btn" data-filter="ending">Ending Soon</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="auction-filters">
+            <div class="container">
+                <div class="filter-options">
+                    <div class="filter-group">
+                        <label for="category">Category</label>
+                        <select id="category" aria-label="Filter by category">
+                            <option value="all">All Categories</option>
+                            <option value="food">Food & Beverages</option>
+                            <option value="household">Household Goods</option>
+                            <option value="personal-care">Personal Care</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="location">Location</label>
+                        <select id="location" aria-label="Filter by location">
+                            <option value="all">All Locations</option>
+                            <option value="jhb">Johannesburg</option>
+                            <option value="cpt">Cape Town</option>
+                            <option value="dbn">Durban</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="sort">Sort By</label>
+                        <select id="sort" aria-label="Sort auctions">
+                            <option value="ending">Ending Soonest</option>
+                            <option value="newest">Newest First</option>
+                            <option value="lowest">Lowest Price</option>
+                            <option value="highest">Highest Price</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn-outline reset-filters">
+                        <i class="fas fa-redo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="auction-listings">
+            <div class="container">
+                <div class="auction-grid" id="auction-grid">
+                    <!-- Auction items will be loaded here via JavaScript -->
+                </div>
+                
+                <div class="pagination">
+                    <button class="btn-outline prev-page" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    
+                    <div class="page-numbers">
+                        <button class="page-btn active">1</button>
+                        <button class="page-btn">2</button>
+                        <button class="page-btn">3</button>
+                        <span>...</span>
+                        <button class="page-btn">8</button>
+                    </div>
+                    
+                    <button class="btn-outline next-page">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-cta">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2>Get Auction Alerts</h2>
+                    <p>Sign up to receive notifications when new auctions matching your interests are listed</p>
+                    
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+                            <button type="submit" class="btn-primary">Subscribe</button>
+                        </div>
+                        <p class="form-note">We respect your privacy. Unsubscribe at any time.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2025 SpazaSoko. All rights reserved.</p>
+            <p> System developer: Mohamed Abdirahman.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+</div>
+            </footer>
+        <!-- Footer content same as homepage -->
+    </footer>
+
+    <script src="../assets/js/shared.js"></script>
+    <script src="./brows.js"></script>
+</body>
+</html>
